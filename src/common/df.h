@@ -32,7 +32,7 @@ static INLINE CONST vfloat2 vcast_vf2_f_f(float h, float l) {
 }
 
 static INLINE CONST vfloat2 vcast_vf2_d(double d) {
-  return vf2setxy_vf2_vf_vf(vcast_vf_f(d), vcast_vf_f(d - (float)d));
+  return vf2setxy_vf2_vf_vf(vcast_vf_f((float)d), vcast_vf_f((float)(d - (float)d)));
 }
 
 static INLINE CONST vfloat2 vsel_vf2_vo_vf2_vf2(vopmask m, vfloat2 x, vfloat2 y) {
